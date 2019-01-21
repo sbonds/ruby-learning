@@ -22,5 +22,4 @@ target = rand(100)+1
 
 num_guesses = 0
 
-remaining_guesses = 10 - num_guesses
-puts remaining_guesses.to_s + " guesses left."
+puts "You have #{10 - num_guesses} guesses left."
