@@ -11,4 +11,4 @@ print "What is your name? "
 
 input = gets
 
-puts "Welcome, #{input}"
+puts "Welcome, #{input}!"
