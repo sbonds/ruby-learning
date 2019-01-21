@@ -39,6 +39,6 @@ else
 end
 
 # If too many guesses are made without getting the answer, end the game
-if not guessed_it
+unless guessed_it
     puts "Wow, looked like I picked a tricky one! It was #{target}."
 end
