@@ -3,9 +3,11 @@
 # Practice by Steve Bonds
 # Jan 21 2019
 
+# https://stackoverflow.com/questions/49074871/rubys-output-in-the-windows-console-vs-mingw64-vs-cygwin64
+STDOUT.sync = true
+
 puts "Welcome to 'Get My Number!'"
 print "What is your name? "
-flush # On my Windows 10 box no output appeared until I hit enter
 
 input = gets
 
