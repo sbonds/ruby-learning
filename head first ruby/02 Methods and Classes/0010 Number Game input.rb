@@ -14,3 +14,8 @@ input = gets
 name = input.chomp
 
 puts "Welcome, #{name}!"
+
+# Store the number to be guessed
+puts "I've picked a random number from 1 to 100 inclusive."
+puts "Can you guess it?"
+target = rand(100)+1
