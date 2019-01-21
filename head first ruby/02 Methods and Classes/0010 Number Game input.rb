@@ -11,6 +11,6 @@ print "What is your name? "
 
 input = gets
 
-puts "Welcome, #{input}!"
+name = input.chomp
 
-p input
+puts "Welcome, #{name}!"
