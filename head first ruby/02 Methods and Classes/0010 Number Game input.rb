@@ -5,6 +5,7 @@
 
 puts "Welcome to 'Get My Number!'"
 print "What is your name? "
+flush # On my Windows 10 box no output appeared until I hit enter
 
 input = gets
 
