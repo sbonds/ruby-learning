@@ -23,3 +23,6 @@ target = rand(100)+1
 num_guesses = 0
 
 puts "You have #{10 - num_guesses} guesses left."
+print "What is your guess? "
+guess = gets.to_i  # read from the keyboard, drop anything nonnumeric, and make it an integer
+
