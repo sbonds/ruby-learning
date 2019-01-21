@@ -19,3 +19,8 @@ puts "Welcome, #{name}!"
 puts "I've picked a random number from 1 to 100 inclusive."
 puts "Can you guess it?"
 target = rand(100)+1
+
+num_guesses = 0
+
+remaining_guesses = 10 - num_guesses
+puts remaining_guesses.to_s + " guesses left."
