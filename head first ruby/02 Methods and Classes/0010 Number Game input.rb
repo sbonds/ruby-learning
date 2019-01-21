@@ -26,3 +26,19 @@ puts "You have #{10 - num_guesses} guesses left."
 print "What is your guess? "
 guess = gets.to_i  # read from the keyboard, drop anything nonnumeric, and make it an integer
 
+if guess < target
+    puts "Not quite. Your guess was too LOW."
+elsif guess > target
+    puts "Whoa there! Your guess was too HIGH."
+elsif guess == target
+    puts "Nailed it!"
+    puts "Nice job, #{name}! You guessed it in only #{num_guesses} tries!"
+    guessed_it = true
+else
+    puts "This should have been impossible. What the heck???"
+end
+
+# If too many guesses are made without getting the answer, end the game
+if not guessed_it
+    puts "Wow, looked like I picked a tricky one! It was #{target}."
+end
