@@ -13,4 +13,4 @@ input = gets
 
 puts "Welcome, #{input}!"
 
-puts input.inspect
+p input
