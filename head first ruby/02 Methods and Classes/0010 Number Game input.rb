@@ -26,7 +26,7 @@ num_guesses = 0
 # Take note when the number is guessed correctly.
 guessed_it = false
 
-while num_guesses < 10 && guessed_it == false
+until num_guesses == 10 || guessed_it
 
     puts "You have #{10 - num_guesses} guesses left."
     print "What is your guess? "
