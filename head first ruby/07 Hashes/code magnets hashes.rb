@@ -1,19 +1,9 @@
-volume
-result=
-options[:depth]
-width: 10,
-volume
+def volume(options)
+    options[:depth] * options[:height] * options[:width]
 end
-options[:height]
-)
-*
-height: 5,
-def
-(options)
-options[:width]
-(
-*
-depth: 2.5
+
+result=volume(width: 10, height: 5, depth: 2.5)
+
 puts "Volume is #{result}"
 
 # Output should be: "Volume is 125.0"
