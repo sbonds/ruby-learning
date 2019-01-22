@@ -1,20 +1,17 @@
-puts "Preheat oven to 375 degrees F"
-puts "Place #{ingredients} in dish"
-puts "Bake for 20 minutes"
-"rice, broccoli, and chicken"
-"noodles, celery, and tuna"
-def
+def make_casserole
+    puts "Preheat oven to 375 degrees F"
+    ingredients = yield
+    puts "Place #{ingredients} in dish"
+    puts "Bake for 20 minutes"
 end
-=
-do
+
+make_casserole do 
+    "noodles, celery, and tuna"
 end
-yield
-do
+
+make_casserole do 
+    "rice, broccoli, and chicken" 
 end
-ingredients
-make_casserole
-make_casserole
-make_casserole
 
 =begin
 Expected output:
