@@ -24,3 +24,12 @@ class Cat
         puts "Sauntering to the #{destination}."
     end
 end # Cat
+
+bird = Bird.new
+dog = Dog.new
+cat = Cat.new
+
+bird.move("tree")
+dog.talk
+bird.talk
+cat.move("house")
