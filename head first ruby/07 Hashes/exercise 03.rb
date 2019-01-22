@@ -11,10 +11,21 @@ end
 What is the output for each of these:
 
 create(database: "catalog", user: "carl")
++ 'Creating catalog for owner carl...'
+
 create(user: "carl")
++ 'Creating   for owner carl...'
+
 create
++ 'Creating  for owner  ...'
+
 connect(database: "catalog")
++ 'Connecting to catalog on localhost port 3306 as root'
+
 connect(database: "catalog", password: "1234")
++ 'unknown keyword: password'
+
 connect(user: "carl")
++ 'missing keyword: database'
 
 =end
