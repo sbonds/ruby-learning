@@ -1,39 +1,39 @@
 def pig_latin(words)
 
   original_length = 0
-  _________  = 0
+  new_length = 0
 
-  words.___  do _______
+  words.each do |word|
     puts "Original word: #{word}"
-    ______________ += word.length
+    original_length += word.length
     letters = word.chars
     first_letter = letters.shift
     new_word = "#{letters.join}#{first_letter}ay"
-    puts "Pig Latin word: #{________}"
-    ___________ += new_word.length
+    puts "Pig Latin word: #{new_word}"
+    new_length += new_word.length
   end
 
-  puts "Total original length: #{________________}" 
+  puts "Total original length: #{original_length}" 
   puts "Total Pig Latin length: #{new_length}"
 
 end
 
 my_words = ["blocks", "totally", "rock"]
-pig_latin(________)
+pig_latin(my_words)
 
 =begin
 Things to use:
-|word|
+X |word|
 yield
-original_length
-new_length
-new_word
+X original_length
+X new_length
+X new_word
 shrink
-new_length
-my_words
+X new_length
+X my_words
 new
 each
-original_length
+X original_length
 
 Output:
 Original word: blocks
