@@ -1,7 +1,7 @@
 # IRB behaves poorly on some inputs, working with a file seems simpler
-protons = { "He" => 2 } # { "He"=>2 }
+protons = { "He" => 2 } # protons = { "He"=>2 }
 protons["He"] # 2
-protons["C"] = 6 # {"He"=>2,"C"=>6}
+protons["C"] = 6 # 6
 protons["C"] # 6
 protons.has_key?("C") # true
 protons.has_value?(119) # false
