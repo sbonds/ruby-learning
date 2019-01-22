@@ -7,7 +7,7 @@ class Robot
         @arms = value
     end
 
-    attr_accessor :legs, :body
+    attr_reader :legs, :body
 
     attr_writer :head, :eyes
 
