@@ -2,7 +2,7 @@ def yield_number
     yield 4
 end
 
-______________
+array = [1, 2, 3]
 
 yield_number { |number| array << number }
 
