@@ -1,4 +1,4 @@
-___________________
+contents = []
 
 File.open("sample.txt") do |file|
     contents = file.readlines
