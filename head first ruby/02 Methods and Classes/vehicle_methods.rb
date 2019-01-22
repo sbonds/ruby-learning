@@ -12,3 +12,7 @@ def use_headlights(brightness = "low-beam")
     puts "Turning on #{brightness} headlights"
     puts "Watch out for deer!"
 end
+
+def mileage(miles_driven, gas_used)
+    miles_driven / gas_used
+end
