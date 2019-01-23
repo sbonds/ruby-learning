@@ -1,29 +1,24 @@
-Monkey
-Curious
-Clumsy
-Curious
-Clumsy
+
+module Curious
+    def investigate(thing)
+        puts "Looks at #{thing}"
+    end
 end
-puts "Looks at #{thing}"
+
+module Clumsy
+    def break(thing)
+        puts "Knocks over #{thing}"
+    end
 end
+
+class Monkey
+    include Curious
+    include Clumsy
 end
-puts "Knocks over #{thing}"
-end
-end
-bubbles =
-Monkey.new
-module
-module
-class
-def investigate(thing)
-investigate("vase")
-def break(thing)
-break("vase")
-include
-include
-include
-bubbles.
-bubbles.
+
+bubbles = Monkey.new
+bubbles.investigate("vase")
+bubbles.break("vase")
 
 =begin
 Output:
