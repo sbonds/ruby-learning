@@ -30,8 +30,8 @@ FarmerBot.new.move("field")
 
 =begin
 Output guess:
--
--
--
+- "Rolling to hangar"
+- "Flying to lab"
+- "Walking to field"
 
 =end
