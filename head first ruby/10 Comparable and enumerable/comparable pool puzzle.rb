@@ -1,18 +1,17 @@
 class Apple
+    include Comparable
 
-  _______ Comparable
+    attr_accessor :weight
 
-  attr_accessor _______
+    def initialize (weight)
 
-  def _______ (weight)
+        self.weight = weight
 
-  _______ .weight = weight
+    end
 
-  end
-
-  def _______ (other)
-    self.weight  < => .weight
-  end
+    def <=> (other)
+        self.weight <=> other.weight
+    end
 end
 
 small_apple = Apple.new(0.17)
@@ -21,8 +20,8 @@ big_apple = Apple.new(0.25)
 
 puts "small_apple > medium_apple:"
 puts small_apple > medium_apple
-puts "medium_apple  <  big_apple:"
-puts medium_apple  <  big_apple
+puts "medium_apple < big_apple:"
+puts medium_apple < big_apple
 
 =begin
 Expected output:
@@ -34,16 +33,14 @@ true
 
 Pool:
 
-include
 between?
 >=
-self
-other
-initialize
+
+
 spaceship
 constant
 =>
-<=>
+
 :weight
 
 =end
