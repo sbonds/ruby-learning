@@ -41,7 +41,7 @@ class ExerciseTests < Minitest::Test
         # is a type of StandardError. I suspect making us think about
         # this is why it was even included in the exercise. :-)
         assert_raises(StandardError) do
-            raise(ZeroDivisionError, "Ooops!")
+            raise ZeroDivisionError, "Ooops!"
         end
     end
 
