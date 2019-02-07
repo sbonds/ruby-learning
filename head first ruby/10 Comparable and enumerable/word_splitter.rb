@@ -3,6 +3,7 @@
 class WordSplitter
     include Enumerable
 
+    # The string to split into words (based on single spaces as word separator)
     attr_accessor :string
 
     # Run the block passed in on each group of characters
