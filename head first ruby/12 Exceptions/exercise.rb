@@ -1,4 +1,4 @@
-class ___ < StandardError
+class TestScoreError < StandardError
 end
 
 score = 52
@@ -6,12 +6,12 @@ begin
     if score > 60
         puts "passing grade"
     else
-        ____ TestScoreError, "failing grade"
+        raise TestScoreError, "failing grade"
     end
-rescue _____ => error
-    puts "Received #{error._____}. Taking make-up exam..."
+rescue TestScoreError => error
+    puts "Received #{error.message}. Taking make-up exam..."
     score = 63
-    _____
+    retry
 end
 
 =begin
