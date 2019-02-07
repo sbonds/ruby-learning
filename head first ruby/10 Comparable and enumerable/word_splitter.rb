@@ -6,6 +6,12 @@ class WordSplitter
     # The string to split into words (based on single spaces as word separator)
     attr_accessor :string
 
+    # Creates a new instance with its string
+    # attribute set to the given string.
+    def initialize(string)
+        self.string = string
+    end
+
     # Run the block passed in on each group of characters
     # separated by a single space.
     def each
