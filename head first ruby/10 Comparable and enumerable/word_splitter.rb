@@ -1,8 +1,12 @@
+# This class allows you to do things with strings split on
+# spaces.
 class WordSplitter
     include Enumerable
 
     attr_accessor :string
 
+    # Run the block passed in on each group of characters
+    # separated by a single space.
     def each
         string.split(" ").each do |word|
             yield word
