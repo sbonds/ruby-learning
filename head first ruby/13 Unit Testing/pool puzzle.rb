@@ -1,20 +1,20 @@
-___ 'minitest/autorun'
+require 'minitest/autorun'
 
-class TestArray < ____
-    def ____
+class TestArray < Minitest::Test
+    def setup
         @array = ['a','b','c']
     end
 
     def test_length
-        ___ (3, ___.length)
+        assert_equal(3, @array.length)
     end
 
     def test_last
-        assert_equal(___,@array.last)
+        assert_equal('c',@array.last)
     end
 
     def test_join
-        ____('a-b-c', @array.join('-'))
+        assert_equal('a-b-c', @array.join('-'))
     end
 end
 
@@ -22,17 +22,17 @@ end
 Pool:
 
 first
-assert_equal
-'c'
+
+
 teardown
 assert
-@array
+
 'a'
-Minitest::Test
-setup
-require
+
+
+
 test
-assert_equal
+
 
 Expected output:
 (all three tests pass)
