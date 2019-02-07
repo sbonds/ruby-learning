@@ -1,13 +1,13 @@
 require 'sinatra'
 
-get(___) do
-    erb _____
+get('/form') do
+    erb :form
 end
 
-____('/convert') do
-    fahrenheit = ____['temperature'].to_f
+post('/convert') do
+    fahrenheit = params['temperature'].to_f
     celsius = (fahrenheit -32) / 1.8
-    format("%0.1f degrees Fahrenheit is %0.1 degrees Celsius.", fahrenheit, celsius)
+    format("%0.1f degrees Fahrenheit is %0.1f degrees Celsius.", fahrenheit, celsius)
 end
 
 =begin
