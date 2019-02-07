@@ -1,10 +1,16 @@
 =begin
 Magnets:
-'Make your own sandwich!'
-'sinatra'
-end
-get
-do
-require
-('/sandwich')
+
+
+
+
+
+
+
 =end
+
+require 'sinatra'
+
+get ('/sandwich') do
+    'Make your own sandwich!'
+end
