@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <% [1,2,3,4].each do |number| %>
+        <% if number.even? %>
+          <li><%= number %> is even.</li>
+        <% else %>
+          <li><%= number %> is odd.</li>
+        <% end %>
+    <% end %>
+  </body>
+</html>
+
+<!-- What would the output be?
+<li>1 is odd</li>
+<li>2 is even</li>
+<li>3 is odd</li>
+<li>4 is even</li>
+-->
