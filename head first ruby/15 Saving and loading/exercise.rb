@@ -16,10 +16,11 @@ end
 =begin
 What output is expected for these URLs:
 
-......http://localhost:4567/hello
+Hi there! http://localhost:4567/hello
 
-......http://localhost:4567/ciao
+Sinatra says ciao http://localhost:4567/ciao
 
-......http://localhost:4567/goodbye
+Sinatra says goodbye http://localhost:4567/goodbye
+(first match on :greeting)
 
 =end
