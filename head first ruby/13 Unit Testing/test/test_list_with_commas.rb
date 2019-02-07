@@ -12,7 +12,7 @@ class TestListWithCommas < Minitest::Test
     def test_it_joins_three_words_with_commas
         list = ListWithCommas.new
         list.items = [ 'apple', 'orange', 'pear']
-        assert('apple, orange, and orange' == list.join)
+        assert('apple, orange, and pear' == list.join)
     end
 
 end
