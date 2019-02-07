@@ -1,17 +1,17 @@
-require ___
+require 'sinatra'
 
-___('/addition') do
+get('/addition') do
     @first = 3
-    ___ = 5
-    @result = ____ + @second
-    erb ____
+    @second = 5
+    @result = @first + @second
+    erb :addition
 end
 
-get(___) do
-    ___ = 2
+get('/multiplication') do
+    @first = 2
     @second = 6
-    ____ = @first * @second
-    ___ :multiplication
+    @result = @first * @second
+    erb :multiplication
 end
 
 =begin
@@ -22,17 +22,17 @@ Output for /multiplication:
 2 times 6 equals 12
 
 Pool for all files:
-@second
-@second
-'sinatra'
-get
-erb
-@first
+
+
+
+
+
+
 post
-'/multiplication'
-@result
-@first
-@result
+
+
+
+
 @minus
-:addition
+
 =end
