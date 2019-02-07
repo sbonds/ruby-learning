@@ -1,20 +1,32 @@
 =begin
-def
-end
-end
-begin
-if destination == "Hawaii"
-(destination)
-drive
-end
-"You can't drive to Hawaii!"
-puts error.message
-=>
-rescue
-drive("Hawaii")
-error
-raise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Output expected:
 You can't drive to Hawaii!
 =end
+
+def drive (destination)
+    if destination == "Hawaii"
+        raise "You can't drive to Hawaii!"
+    end
+end
+
+begin
+    drive("Hawaii")
+rescue => error
+    puts error.message
+end
