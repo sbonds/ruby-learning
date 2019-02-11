@@ -12,6 +12,10 @@ class Coffee
     end
 end
 
+RSpec.configure do |config|
+    config.example_status_persistence_file_path = 'spec/examples.txt'
+end
+
 RSpec.describe 'A cup of coffee' do
     let(:coffee) { Coffee.new }
 
