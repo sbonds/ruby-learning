@@ -25,6 +25,15 @@ class Coffee
         end
         price
     end
+
+    def color
+        ingredients.include?(:milk) ? :light : :dark
+    end
+
+    def temperature
+        # 205.0 is default? What is this, McDonalds?
+        ingredients.include?(:milk) ? 190.0 : 205.0
+    end
 end
 
 RSpec.configure do |config|
