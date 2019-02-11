@@ -16,3 +16,15 @@ RSpec.describe Tea do
     expect(tea.temperature).to be > 200.0
   end
 end
+
+=begin
+"documentation" format:
+
+    Tea
+        tastes like Earl Grey (FAILED - 1)
+        is hot (FAILED - 2)
+
+HTML format with "coderay" gem installed shows the context
+of the error very nicely.
+
+=end
