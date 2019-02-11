@@ -3,6 +3,10 @@ class Coffee
         # Track the additional amount the price goes up for
         # each ingredient
         @cost_of = { :milk => 0.25 }
+
+        @base_price = 1.00
+
+        @ingredients = []
     end
 
     def ingredients
@@ -10,15 +14,13 @@ class Coffee
     end
 
     def add(ingredient)
-        p ingredient
         @ingredients << ingredient
     end
 
     def price
-        price = 1.00
+        price = @base_price
         # Add the price for each ingredient to the base cost
-        # This explicit way doesn't seem very Ruby-ish
-        for ingredient in @ingredients
+        ingredients.each do |ingredient|
             price += @cost_of[ingredient]
         end
         price
