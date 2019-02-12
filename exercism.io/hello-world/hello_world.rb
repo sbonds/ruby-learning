@@ -9,7 +9,12 @@ Did you mean?  HelloWorldTest
 
 Perhaps it's not just any function name, but a specific function name
 expected. Like "HelloWorld"?
+
+Maybe I should watch the video? It mentions the GETTING_STARTED.md file which
+contains more details than the web page.
 =end
-def HelloWorld
-  "Hello, World!"
+class HelloWorld
+  def self.hello
+    "Hello, World!"
+  end
 end
