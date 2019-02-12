@@ -61,6 +61,29 @@ Expected: "One for you, one for me."
 
 This was expected since I haven't actually returned anything yet.
 
+One test worked, the others were skipped. Why skipped?
+
+  $ ruby two-fer/two_fer_test.rb --verbose
+  Run options: --verbose --seed 20594
+
+  # Running:
+
+  TwoFerTest#test_another_name_given = 0.00 s = S
+  TwoFerTest#test_no_name_given = 0.00 s = .
+  TwoFerTest#test_a_name_given = 0.00 s = S
+
+  Finished in 0.000982s, 3056.0012 runs/s, 1018.6671 assertions/s.
+
+    1) Skipped:
+  TwoFerTest#test_another_name_given [two-fer/two_fer_test.rb:17]:
+  Skipped, no message given
+
+    2) Skipped:
+  TwoFerTest#test_a_name_given [two-fer/two_fer_test.rb:12]:
+  Skipped, no message given
+
+Maybe I need to have a method that takes a parameter for the name?
+
 =end
 
 # TODO: Ask if there's a better way to determine the desired class name from the
@@ -69,5 +92,9 @@ This was expected since I haven't actually returned anything yet.
 class TwoFer
   def self.two_fer
     "One for you, one for me."
+  end
+
+  def self.two_fer(name)
+    "One for #{name}, one for me."
   end
 end
