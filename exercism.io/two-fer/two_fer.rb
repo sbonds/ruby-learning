@@ -31,7 +31,19 @@ Skipped, no message given
 #  NameError: uninitialized constant TwoFerTest::TwoFer
 # Suggests we need a class "TwoFerTest" with a method TwoFer
 
-class TwoFerTest
+# New error:
+#  two-fer/two_fer_test.rb:5:in `<main>': superclass mismatch for class TwoFerTest (TypeError)
+
+# Based on Google search
+#  https://stackoverflow.com/questions/5512023/ruby-on-rails-3-superclass-mismatch-for-class
+# This means we have a duplicate class. Perhaps taking "Test" off the end is what we want.
+# Seems a bit vague though...
+
+
+# TODO: Ask if there's a better way to determine the desired class name from the
+# test failure output.
+
+class TwoFer
   def TwoFer
   end
 end
