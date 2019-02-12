@@ -47,12 +47,17 @@ NoMethodError: undefined method `two_fer' for TwoFer:Class
 
 That implies we're looking to define that undefined method. Consider it done!
 
+Hmm... still undefined. Maybe it needs to be a class method instead of an
+instance method?
+
+https://stackoverflow.com/questions/35965231/ruby-undefined-method-for-class-method 
+
 =end
 
 # TODO: Ask if there's a better way to determine the desired class name from the
 # test failure output.
 
 class TwoFer
-  def two_fer
+  def self.two_fer
   end
 end
