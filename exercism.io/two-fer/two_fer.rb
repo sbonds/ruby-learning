@@ -52,6 +52,15 @@ instance method?
 
 https://stackoverflow.com/questions/35965231/ruby-undefined-method-for-class-method 
 
+Hey, that was it! New error:
+
+  1) Failure:
+TwoFerTest#test_no_name_given [two-fer/two_fer_test.rb:8]:
+Expected: "One for you, one for me."
+  Actual: nil
+
+This was expected since I haven't actually returned anything yet.
+
 =end
 
 # TODO: Ask if there's a better way to determine the desired class name from the
@@ -59,5 +68,6 @@ https://stackoverflow.com/questions/35965231/ruby-undefined-method-for-class-met
 
 class TwoFer
   def self.two_fer
+    "One for you, one for me."
   end
 end
