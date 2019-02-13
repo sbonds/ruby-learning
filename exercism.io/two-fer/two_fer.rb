@@ -100,13 +100,23 @@ https://stackoverflow.com/questions/1108612/method-with-same-name-and-different-
 
 Try one method with one arg and set the name equal to "you" if it shows up false-ish
 
+Still fails, same error:
+
+  TwoFerTest#test_no_name_given:
+  ArgumentError: wrong number of arguments (given 0, expected 1)
+      C:/Users/sbonds/git/ruby-learning/exercism.io/two-fer/two_fer.rb:109:in `two_fer'
+      two-fer/two_fer_test.rb:8:in `test_no_name_given'
+
+Making parameters optional:
+  https://stackoverflow.com/questions/35747905/a-method-with-an-optional-parameter
+
 =end
 
 # TODO: Ask if there's a better way to determine the desired class name from the
 # test failure output.
 
 class TwoFer
-  def self.two_fer(name)
+  def self.two_fer(name = nil)
     name ||= "you"
     "One for #{name}, one for me."
   end
