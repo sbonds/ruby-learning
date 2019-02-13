@@ -128,8 +128,7 @@ I commented out the 'skip' lines and all three tests pass.
 # TODO: Are we expected to read the test scripts or rely only on its output?
 
 class TwoFer
-  def self.two_fer(name = nil)
-    name ||= "you"
+  def self.two_fer(name = 'you')
     "One for #{name}, one for me."
   end
 end
