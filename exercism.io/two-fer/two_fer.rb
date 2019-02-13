@@ -110,10 +110,22 @@ Still fails, same error:
 Making parameters optional:
   https://stackoverflow.com/questions/35747905/a-method-with-an-optional-parameter
 
+Using "name = nil" worked nicely.
+
+One test passed, two tests skipped. Why skipped?
+
+OK, I finally broke down and looked at the test code itself rather than just its
+output. It appears that the tests are skipped explicitly (not based on a
+dependency of some earlier test passing.)
+
+I commented out the 'skip' lines and all three tests pass.
+
 =end
 
 # TODO: Ask if there's a better way to determine the desired class name from the
 # test failure output.
+
+# TODO: Are we expected to read the test scripts or rely only on its output?
 
 class TwoFer
   def self.two_fer(name = nil)
