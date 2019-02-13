@@ -84,17 +84,30 @@ One test worked, the others were skipped. Why skipped?
 
 Maybe I need to have a method that takes a parameter for the name?
 
+Nope, now it gets mad when called without an argument.
+
+    2) Error:
+  TwoFerTest#test_no_name_given:
+  ArgumentError: wrong number of arguments (given 0, expected 1)
+      C:/Users/sbonds/git/ruby-learning/exercism.io/two-fer/two_fer.rb:97:in `two_fer'
+      two-fer/two_fer_test.rb:8:in `test_no_name_given'
+
+Based on
+
+https://stackoverflow.com/questions/1108612/method-with-same-name-and-different-parameters-in-ruby
+
+"Ruby doesn't really support overloading"
+
+Try one method with one arg and set the name equal to "you" if it shows up false-ish
+
 =end
 
 # TODO: Ask if there's a better way to determine the desired class name from the
 # test failure output.
 
 class TwoFer
-  def self.two_fer
-    "One for you, one for me."
-  end
-
   def self.two_fer(name)
+    name ||= "you"
     "One for #{name}, one for me."
   end
 end
